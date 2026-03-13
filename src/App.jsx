@@ -4,11 +4,11 @@ const PASSWORD = "cfoassociates2026";
 
 // ─── UPDATE THESE URLS after deploying each tool to the new Vercel account ───
 const TOOL_URLS = {
-  salesTax:          "https://sales-tax-dashboard-rho.vercel.app",
-  reconciliation:    "https://reconciliation-review.vercel.app",
-  uncategorizedTxn:  "https://uncategorized-txn-format-mu.vercel.app",
-  stateCompliance:   "https://state-compliance-dashboard-omega.vercel.app",
-  testPage:          "https://cfoa-test-page-ashen.vercel.app",
+  salesTax:          "/sales-tax-dashboard",
+  reconciliation:    "/reconciliation-review",
+  uncategorizedTxn:  "/uncategorized-txn-format",
+  stateCompliance:   "/state-compliance-dashboard",
+  testPage:          "/cfoa-test-page",
 };
 
 const tools = [

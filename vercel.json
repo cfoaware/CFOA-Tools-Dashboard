@@ -2,5 +2,21 @@
   "buildCommand": "npm run build",
   "outputDirectory": "dist",
   "framework": "vite",
-  "rewrites": [{ "source": "/(.*)", "destination": "/index.html" }]
+  "rewrites": [
+    { "source": "/state-compliance-dashboard/:path*", "destination": "https://state-compliance-dashboard-omega.vercel.app/:path*" },
+    { "source": "/state-compliance-dashboard",        "destination": "https://state-compliance-dashboard-omega.vercel.app/" },
+    { "source": "/uncategorized-txn-format/:path*",   "destination": "https://uncategorized-txn-format-mu.vercel.app/:path*" },
+    { "source": "/uncategorized-txn-format",          "destination": "https://uncategorized-txn-format-mu.vercel.app/" },
+    { "source": "/sales-tax-dashboard/:path*",        "destination": "https://sales-tax-dashboard-rho.vercel.app/:path*" },
+    { "source": "/sales-tax-dashboard",               "destination": "https://sales-tax-dashboard-rho.vercel.app/" },
+    { "source": "/reconciliation-review/:path*",      "destination": "https://reconciliation-review.vercel.app/:path*" },
+    { "source": "/reconciliation-review",             "destination": "https://reconciliation-review.vercel.app/" },
+    { "source": "/koinly-je/:path*",                  "destination": "https://koinly-je-green.vercel.app/:path*" },
+    { "source": "/koinly-je",                         "destination": "https://koinly-je-green.vercel.app/" },
+    { "source": "/cfoa-test-page/:path*",             "destination": "https://cfoa-test-page-ashen.vercel.app/:path*" },
+    { "source": "/cfoa-test-page",                    "destination": "https://cfoa-test-page-ashen.vercel.app/" },
+    { "source": "/global-ledger-processor/:path*",    "destination": "https://global-ledger-processor-umber.vercel.app/:path*" },
+    { "source": "/global-ledger-processor",           "destination": "https://global-ledger-processor-umber.vercel.app/" },
+    { "source": "/(.*)",                              "destination": "/index.html" }
+  ]
 }
