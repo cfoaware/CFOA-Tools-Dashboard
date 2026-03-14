@@ -9,41 +9,17 @@ const TOOL_URLS = {
   uncategorizedTxn:  "/uncategorized-txn-format",
   stateCompliance:   "/state-compliance-dashboard",
   testPage:          "/cfoa-test-page",
+  globalLedger:      "/global-ledger-processor",
+  koinlyJe:          "/koinly-je",
 };
 
 const tools = [
-  {
-    id: 1,
-    name: "Sales Tax Nexus Dashboard",
-    description: "Economic nexus thresholds by state after South Dakota v. Wayfair. Search, filter, and compare all 50 states at a glance.",
-    category: "Tax",
-    url: TOOL_URLS.salesTax,
-    status: "live",
-    added: "Mar 2026",
-  },
-  {
-    id: 2,
-    name: "Payroll Tool",
-    description: "Your next payroll tool will appear here once it's ready.",
-    category: "Payroll",
-    url: "#",
-    status: "soon",
-    added: "",
-  },
-  {
-    id: 3,
-    name: "Financial Reporting Tool",
-    description: "Your next financial reporting tool will appear here once it's ready.",
-    category: "Financial Reporting",
-    url: "#",
-    status: "soon",
-    added: "",
-  },
+  // ── Digital Assets ──────────────────────────────────────────────────────────
   {
     id: 5,
     name: "Reconciliation Review v1",
-    description: "Use AI to Analyze Koinly Reconciliation",
-    category: "Crypto",
+    description: "AI-powered Koinly reconciliation analysis — surfaces discrepancies and flags unresolved items for review.",
+    division: "Digital Assets",
     url: TOOL_URLS.reconciliation,
     status: "live",
     added: "Mar 2026",
@@ -51,9 +27,47 @@ const tools = [
   {
     id: 6,
     name: "Uncategorized Transactions Formatting",
-    description: "Formats and organizes uncategorized transactions for clean reporting and review.",
-    category: "Crypto",
+    description: "Formats and organizes uncategorized crypto transactions for clean reporting, review, and client delivery.",
+    division: "Digital Assets",
     url: TOOL_URLS.uncategorizedTxn,
+    status: "live",
+    added: "Mar 2026",
+  },
+  {
+    id: 9,
+    name: "Global Ledger Processor",
+    description: "Process and normalize global ledger entries across multiple entities and currencies.",
+    division: "Digital Assets",
+    url: TOOL_URLS.globalLedger,
+    status: "live",
+    added: "Mar 2026",
+  },
+  {
+    id: 10,
+    name: "Koinly JE Generator",
+    description: "Generates journal entries from Koinly export data for seamless import into your accounting system.",
+    division: "Digital Assets",
+    url: TOOL_URLS.koinlyJe,
+    status: "live",
+    added: "Mar 2026",
+  },
+  {
+    id: 11,
+    name: "DeFi Reporting Tool",
+    description: "Specialized reporting for DeFi activity including staking, liquidity pools, and yield farming.",
+    division: "Digital Assets",
+    url: "#",
+    status: "soon",
+    added: "",
+  },
+
+  // ── Ecommerce ───────────────────────────────────────────────────────────────
+  {
+    id: 1,
+    name: "Sales Tax Nexus Dashboard",
+    description: "Economic nexus thresholds by state after South Dakota v. Wayfair. Search, filter, and compare all 50 states at a glance.",
+    division: "Ecommerce",
+    url: TOOL_URLS.salesTax,
     status: "live",
     added: "Mar 2026",
   },
@@ -61,29 +75,99 @@ const tools = [
     id: 7,
     name: "State Compliance Dashboard",
     description: "Track state-level tax nexus thresholds, compliance requirements, and economic presence rules across all 50 states.",
-    category: "Tax",
+    division: "Ecommerce",
     url: TOOL_URLS.stateCompliance,
     status: "live",
     added: "Mar 2026",
   },
   {
-    id: 8,
-    name: "Test Page",
-    description: "Pipeline validation page confirming the GitHub → Vercel deploy flow is live and connected.",
-    category: "Financial Reporting",
-    url: TOOL_URLS.testPage,
-    status: "live",
-    added: "Mar 2026",
+    id: 12,
+    name: "Inventory & COGS Tool",
+    description: "Automate cost of goods sold calculations and inventory reconciliation for ecommerce sellers.",
+    division: "Ecommerce",
+    url: "#",
+    status: "soon",
+    added: "",
+  },
+
+  // ── Professional Services ────────────────────────────────────────────────────
+  {
+    id: 2,
+    name: "Payroll Tool",
+    description: "Streamline payroll processing and tax withholding calculations across multiple states and entities.",
+    division: "Professional Services",
+    url: "#",
+    status: "soon",
+    added: "",
+  },
+  {
+    id: 3,
+    name: "Financial Reporting Tool",
+    description: "Generate standardized financial reports and board packages with a single click.",
+    division: "Professional Services",
+    url: "#",
+    status: "soon",
+    added: "",
+  },
+  {
+    id: 13,
+    name: "Entity Structure Analyzer",
+    description: "Map multi-entity structures and surface tax optimization opportunities for professional service firms.",
+    division: "Professional Services",
+    url: "#",
+    status: "soon",
+    added: "",
+  },
+
+  // ── Real Estate ──────────────────────────────────────────────────────────────
+  {
+    id: 14,
+    name: "Cost Segregation Tool",
+    description: "Accelerate depreciation schedules and identify cost segregation opportunities for real estate assets.",
+    division: "Real Estate",
+    url: "#",
+    status: "soon",
+    added: "",
+  },
+  {
+    id: 15,
+    name: "1031 Exchange Tracker",
+    description: "Track exchange timelines, deadlines, and replacement property options for 1031 exchanges.",
+    division: "Real Estate",
+    url: "#",
+    status: "soon",
+    added: "",
+  },
+
+  // ── Hospitality ─────────────────────────────────────────────────────────────
+  {
+    id: 16,
+    name: "Tip Reporting Tool",
+    description: "Automate tip allocation reporting and reconciliation for restaurants and hospitality businesses.",
+    division: "Hospitality",
+    url: "#",
+    status: "soon",
+    added: "",
+  },
+  {
+    id: 17,
+    name: "Revenue Per Room Dashboard",
+    description: "Track RevPAR, ADR, and occupancy rates with automated tax reserve calculations.",
+    division: "Hospitality",
+    url: "#",
+    status: "soon",
+    added: "",
   },
 ];
 
-const categories = ["All", "Tax", "Payroll", "Financial Reporting", "Crypto"];
+const divisions = ["All", "Digital Assets", "Real Estate", "Ecommerce", "Professional Services", "Hospitality"];
 
-const categoryMeta = {
-  Tax:                   { icon: "⚖️", accent: "#e8450a" },
-  Payroll:               { icon: "💼", accent: "#f59e0b" },
-  "Financial Reporting": { icon: "📊", accent: "#e8450a" },
-  Crypto:                { icon: "₿",  accent: "#f59e0b" },
+const divisionMeta = {
+  "Digital Assets":        { icon: "₿",  accent: "#e8450a", desc: "Crypto, DeFi & blockchain accounting" },
+  "Real Estate":           { icon: "🏢", accent: "#f59e0b", desc: "Property, depreciation & 1031 exchanges" },
+  "Ecommerce":             { icon: "🛒", accent: "#e8450a", desc: "Sales tax, nexus & online sellers" },
+  "Professional Services": { icon: "💼", accent: "#f59e0b", desc: "Payroll, reporting & entity structure" },
+  "Hospitality":           { icon: "🏨", accent: "#e8450a", desc: "Restaurants, hotels & tip reporting" },
 };
 
 function getStyles(dark) {
@@ -118,7 +202,7 @@ function getStyles(dark) {
       transition: opacity 0.15s;
     }
     .launch-btn:hover { opacity: 0.85; }
-    .cat-pill {
+    .div-pill {
       padding: 9px 18px; border-radius: 50px;
       border: 1.5px solid ${dark ? "#2a2d3a" : "#e0e2e7"};
       font-size: 13px; font-weight: 600;
@@ -126,9 +210,10 @@ function getStyles(dark) {
       cursor: pointer; transition: all 0.15s;
       background: ${dark ? "#1a1d27" : "#fff"};
       color: ${dark ? "#9aa0b0" : "#5a5a6e"};
+      white-space: nowrap;
     }
-    .cat-pill:hover { border-color: #e8450a; color: #e8450a; }
-    .cat-pill.active {
+    .div-pill:hover { border-color: #e8450a; color: #e8450a; }
+    .div-pill.active {
       background: linear-gradient(135deg, #e8450a 0%, #f7a01a 100%);
       color: #fff; border-color: transparent;
       box-shadow: 0 4px 12px rgba(232,69,10,0.25);
@@ -145,14 +230,15 @@ function getStyles(dark) {
     }
     .search-input:focus { border-color: #e8450a; }
     .search-input::placeholder { color: ${dark ? "#555b6e" : "#aaa"}; }
-    .stat-card {
+    .div-card {
       background: ${dark ? "#1a1d27" : "#fff"};
       border: 1px solid ${dark ? "#2a2d3a" : "#e8eaed"};
-      border-radius: 14px; padding: 20px 22px;
+      border-radius: 14px; padding: 22px 24px;
       cursor: pointer;
-      transition: transform 0.15s, box-shadow 0.15s, background 0.3s;
+      transition: transform 0.15s, box-shadow 0.15s, background 0.3s, border-color 0.15s;
     }
-    .stat-card:hover { transform: translateY(-2px); box-shadow: 0 6px 20px rgba(0,0,0,${dark ? "0.3" : "0.07"}); }
+    .div-card:hover { transform: translateY(-2px); box-shadow: 0 6px 20px rgba(0,0,0,${dark ? "0.3" : "0.07"}); border-color: #e8450a; }
+    .div-card.selected { border-color: #e8450a; box-shadow: 0 0 0 3px rgba(232,69,10,0.12); }
     .pw-input {
       width: 100%; padding: 14px 16px; border-radius: 10px;
       border: 1.5px solid ${dark ? "#2a2d3a" : "#e0e2e7"};
@@ -184,6 +270,14 @@ function getStyles(dark) {
       background: ${dark ? "#1a1d27" : "#f4f5f7"};
       border: 1px solid ${dark ? "#2a2d3a" : "#e8eaed"};
       transition: background 0.3s;
+    }
+    .section-header {
+      display: flex; align-items: center; gap: 12px;
+      margin-bottom: 18px; margin-top: 8px;
+    }
+    .section-divider {
+      flex: 1; height: 1px;
+      background: ${dark ? "#2a2d3a" : "#e8eaed"};
     }
   `;
 }
@@ -223,15 +317,20 @@ function LoginScreen({ onLogin, dark, toggleDark }) {
 
 function Portal({ dark, toggleDark }) {
   const [search, setSearch] = useState("");
-  const [activeCategory, setActiveCategory] = useState("All");
+  const [activeDivision, setActiveDivision] = useState("All");
 
   const filtered = tools.filter(t => {
-    const matchCat = activeCategory === "All" || t.category === activeCategory;
+    const matchDiv = activeDivision === "All" || t.division === activeDivision;
     const matchSearch = t.name.toLowerCase().includes(search.toLowerCase()) ||
       t.description.toLowerCase().includes(search.toLowerCase()) ||
-      t.category.toLowerCase().includes(search.toLowerCase());
-    return matchCat && matchSearch;
+      t.division.toLowerCase().includes(search.toLowerCase());
+    return matchDiv && matchSearch;
   });
+
+  // Group filtered tools by division
+  const groupedDivisions = activeDivision === "All"
+    ? divisions.slice(1)
+    : [activeDivision];
 
   const liveCount = tools.filter(t => t.status === "live").length;
   const mutedColor = dark ? "#666d80" : "#8a8a9a";
@@ -241,6 +340,7 @@ function Portal({ dark, toggleDark }) {
 
   return (
     <div style={{ minHeight:"100vh", background: dark ? "#0f1117" : "#f4f5f7", transition:"background 0.3s" }}>
+      {/* Header */}
       <div className="header-bar" style={{ padding:"0 40px", position:"sticky", top:0, zIndex:10, display:"flex", alignItems:"center", justifyContent:"space-between", height:68 }}>
         <img src="/logo.webp" alt="CFO Associates" style={{ height:36 }} />
         <div style={{ display:"flex", alignItems:"center", gap:12 }}>
@@ -248,67 +348,120 @@ function Portal({ dark, toggleDark }) {
           <div className="badge" style={{ fontSize:12, fontWeight:600, color: mutedColor, padding:"6px 14px", borderRadius:20, letterSpacing:"0.04em" }}>🔒 INTERNAL ACCESS ONLY</div>
         </div>
       </div>
-      <div style={{ maxWidth:1100, margin:"0 auto", padding:"48px 32px" }}>
-        <div className="fade-up" style={{ marginBottom:40 }}>
+
+      <div style={{ maxWidth:1200, margin:"0 auto", padding:"48px 32px" }}>
+
+        {/* Hero */}
+        <div className="fade-up" style={{ marginBottom:44 }}>
           <div style={{ display:"inline-block", background:"linear-gradient(135deg,rgba(232,69,10,0.1),rgba(247,160,26,0.1))", border:"1px solid rgba(232,69,10,0.2)", borderRadius:20, padding:"5px 14px", fontSize:12, fontWeight:700, color:"#e8450a", letterSpacing:"0.06em", textTransform:"uppercase", marginBottom:16 }}>CFO Associates · Tool Library</div>
           <h1 style={{ fontSize:38, fontWeight:800, color: headingColor, lineHeight:1.15, letterSpacing:"-0.5px", marginBottom:12 }}>
             Your firm's tools,<br />
             <span style={{ background:"linear-gradient(135deg,#e8450a,#f7a01a)", WebkitBackgroundClip:"text", WebkitTextFillColor:"transparent" }}>all in one place.</span>
           </h1>
-          <p style={{ fontSize:15, color: bodyColor, lineHeight:1.65, maxWidth:500 }}>{liveCount} live tool{liveCount !== 1 ? "s" : ""} across {categories.length - 1} categories, built exclusively for the CFO Associates team.</p>
+          <p style={{ fontSize:15, color: bodyColor, lineHeight:1.65, maxWidth:520 }}>
+            {liveCount} live tool{liveCount !== 1 ? "s" : ""} across {divisions.length - 1} divisions, built exclusively for the CFO Associates team.
+          </p>
         </div>
-        <div style={{ display:"grid", gridTemplateColumns:"repeat(auto-fit,minmax(200px,1fr))", gap:16, marginBottom:40 }}>
-          {categories.slice(1).map((cat, i) => {
-            const meta = categoryMeta[cat];
-            const live = tools.filter(t => t.category === cat && t.status === "live").length;
-            const total = tools.filter(t => t.category === cat).length;
+
+        {/* Division Cards */}
+        <div style={{ display:"grid", gridTemplateColumns:"repeat(auto-fit,minmax(190px,1fr))", gap:14, marginBottom:40 }}>
+          {divisions.slice(1).map((div, i) => {
+            const meta = divisionMeta[div];
+            const live = tools.filter(t => t.division === div && t.status === "live").length;
+            const total = tools.filter(t => t.division === div).length;
+            const isSelected = activeDivision === div;
             return (
-              <div key={cat} className="stat-card fade-up" style={{ animationDelay:`${i*0.07}s` }} onClick={() => setActiveCategory(cat)}>
-                <div style={{ fontSize:24, marginBottom:10 }}>{meta.icon}</div>
-                <div style={{ fontSize:26, fontWeight:800, color: headingColor }}>{live}<span style={{ fontSize:14, color: faintColor, fontWeight:400 }}>/{total}</span></div>
-                <div style={{ fontSize:12, color: mutedColor, fontWeight:600, textTransform:"uppercase", letterSpacing:"0.05em" }}>{cat}</div>
-                <div style={{ marginTop:10, height:3, borderRadius:2, background:`linear-gradient(90deg,${meta.accent},#f7a01a)`, width:`${live===0?10:(live/total)*100}%` }} />
+              <div
+                key={div}
+                className={`div-card fade-up${isSelected ? " selected" : ""}`}
+                style={{ animationDelay:`${i*0.07}s` }}
+                onClick={() => setActiveDivision(isSelected ? "All" : div)}
+              >
+                <div style={{ fontSize:26, marginBottom:8 }}>{meta.icon}</div>
+                <div style={{ fontSize:15, fontWeight:800, color: headingColor, marginBottom:3, lineHeight:1.2 }}>{div}</div>
+                <div style={{ fontSize:11, color: mutedColor, marginBottom:10, lineHeight:1.4 }}>{meta.desc}</div>
+                <div style={{ display:"flex", alignItems:"center", justifyContent:"space-between" }}>
+                  <div style={{ fontSize:12, fontWeight:700, color: live > 0 ? meta.accent : faintColor }}>
+                    {live} live<span style={{ fontWeight:400, color: faintColor }}> / {total}</span>
+                  </div>
+                  {isSelected && <div style={{ fontSize:10, fontWeight:700, color:"#e8450a", textTransform:"uppercase", letterSpacing:"0.05em" }}>Active ✓</div>}
+                </div>
+                <div style={{ marginTop:10, height:3, borderRadius:2, background:`linear-gradient(90deg,${meta.accent},#f7a01a)`, width:`${live===0?8:(live/total)*100}%`, transition:"width 0.4s" }} />
               </div>
             );
           })}
         </div>
-        <div style={{ display:"flex", gap:12, marginBottom:28, flexWrap:"wrap", alignItems:"center" }}>
+
+        {/* Search + Filter */}
+        <div style={{ display:"flex", gap:12, marginBottom:36, flexWrap:"wrap", alignItems:"center" }}>
           <div style={{ position:"relative", flex:1, minWidth:220 }}>
             <span style={{ position:"absolute", left:13, top:"50%", transform:"translateY(-50%)", fontSize:15, opacity:0.35 }}>🔍</span>
-            <input className="search-input" placeholder="Search tools by name or category..." value={search} onChange={e => setSearch(e.target.value)} />
+            <input className="search-input" placeholder="Search tools across all divisions..." value={search} onChange={e => setSearch(e.target.value)} />
           </div>
           <div style={{ display:"flex", gap:8, flexWrap:"wrap" }}>
-            {categories.map(c => (
-              <button key={c} className={`cat-pill${activeCategory===c?" active":""}`} onClick={() => setActiveCategory(c)}>
-                {c !== "All" ? categoryMeta[c].icon + " " : ""}{c}
+            {divisions.map(d => (
+              <button key={d} className={`div-pill${activeDivision===d?" active":""}`} onClick={() => setActiveDivision(d)}>
+                {d !== "All" ? divisionMeta[d].icon + " " : ""}{d}
               </button>
             ))}
           </div>
         </div>
-        <div style={{ display:"grid", gridTemplateColumns:"repeat(auto-fill,minmax(300px,1fr))", gap:20 }}>
-          {filtered.map((tool, i) => {
-            const meta = categoryMeta[tool.category] || {};
-            const isLive = tool.status === "live";
-            return (
-              <div key={tool.id} className={`tool-card fade-up${!isLive?" dimmed":""}`} style={{ animationDelay:`${0.1+i*0.06}s` }}>
-                <div style={{ display:"flex", justifyContent:"space-between", alignItems:"center" }}>
-                  <div style={{ background:"linear-gradient(135deg,rgba(232,69,10,0.08),rgba(247,160,26,0.08))", border:"1px solid rgba(232,69,10,0.15)", color:meta.accent, fontSize:11, fontWeight:700, padding:"4px 11px", borderRadius:20, letterSpacing:"0.06em", textTransform:"uppercase" }}>{meta.icon} {tool.category}</div>
-                  <div style={{ fontSize:11, fontWeight:600, padding:"4px 11px", borderRadius:20, background:isLive?(dark?"rgba(16,185,129,0.15)":"rgba(16,185,129,0.1)"):(dark?"#1e2130":"#f4f5f7"), color:isLive?"#34d399":(dark?"#444b5e":"#b0b0c0") }}>{isLive ? "● Live" : "Coming soon"}</div>
-                </div>
-                <div>
-                  <div style={{ fontSize:17, fontWeight:800, color: headingColor, marginBottom:7, lineHeight:1.3 }}>{tool.name}</div>
-                  <div style={{ fontSize:13, color: bodyColor, lineHeight:1.65 }}>{tool.description}</div>
-                </div>
-                <div style={{ display:"flex", justifyContent:"space-between", alignItems:"center", marginTop:"auto", paddingTop:4 }}>
-                  <span style={{ fontSize:11, color: faintColor }}>{tool.added ? `Added ${tool.added}` : ""}</span>
-                  {isLive ? <a href={tool.url} target="_blank" rel="noreferrer" className="launch-btn">Launch →</a> : <span style={{ fontSize:12, color: faintColor, fontStyle:"italic" }}>In development</span>}
-                </div>
+
+        {/* Tools — grouped by division */}
+        {search
+          ? (
+            <>
+              <div style={{ display:"grid", gridTemplateColumns:"repeat(auto-fill,minmax(300px,1fr))", gap:20 }}>
+                {filtered.map((tool, i) => <ToolCard key={tool.id} tool={tool} i={i} dark={dark} headingColor={headingColor} bodyColor={bodyColor} faintColor={faintColor} />)}
               </div>
-            );
-          })}
-        </div>
-        {filtered.length === 0 && <div style={{ textAlign:"center", padding:"80px 0", color: faintColor, fontSize:15 }}>No tools match your search.</div>}
+              {filtered.length === 0 && <div style={{ textAlign:"center", padding:"80px 0", color: faintColor, fontSize:15 }}>No tools match your search.</div>}
+            </>
+          )
+          : groupedDivisions.map((div, gi) => {
+              const divTools = filtered.filter(t => t.division === div);
+              if (divTools.length === 0) return null;
+              const meta = divisionMeta[div];
+              return (
+                <div key={div} style={{ marginBottom:48 }}>
+                  <div className="section-header">
+                    <span style={{ fontSize:20 }}>{meta.icon}</span>
+                    <span style={{ fontSize:17, fontWeight:800, color: headingColor, letterSpacing:"-0.2px" }}>{div}</span>
+                    <span style={{ fontSize:12, color: mutedColor }}>{meta.desc}</span>
+                    <div className="section-divider" />
+                    <span style={{ fontSize:12, fontWeight:600, color: faintColor, whiteSpace:"nowrap" }}>
+                      {divTools.filter(t=>t.status==="live").length} of {divTools.length} live
+                    </span>
+                  </div>
+                  <div style={{ display:"grid", gridTemplateColumns:"repeat(auto-fill,minmax(300px,1fr))", gap:20 }}>
+                    {divTools.map((tool, i) => <ToolCard key={tool.id} tool={tool} i={i} dark={dark} headingColor={headingColor} bodyColor={bodyColor} faintColor={faintColor} />)}
+                  </div>
+                </div>
+              );
+            })
+        }
+
         <p style={{ textAlign:"center", fontSize:12, color: faintColor, marginTop:64 }}>CFO Associates · Internal Use Only · {new Date().getFullYear()}</p>
+      </div>
+    </div>
+  );
+}
+
+function ToolCard({ tool, i, dark, headingColor, bodyColor, faintColor }) {
+  const meta = divisionMeta[tool.division] || {};
+  const isLive = tool.status === "live";
+  return (
+    <div className={`tool-card fade-up${!isLive?" dimmed":""}`} style={{ animationDelay:`${0.05+i*0.05}s` }}>
+      <div style={{ display:"flex", justifyContent:"space-between", alignItems:"center" }}>
+        <div style={{ background:"linear-gradient(135deg,rgba(232,69,10,0.08),rgba(247,160,26,0.08))", border:"1px solid rgba(232,69,10,0.15)", color:meta.accent, fontSize:11, fontWeight:700, padding:"4px 11px", borderRadius:20, letterSpacing:"0.06em", textTransform:"uppercase" }}>{meta.icon} {tool.division}</div>
+        <div style={{ fontSize:11, fontWeight:600, padding:"4px 11px", borderRadius:20, background:isLive?(dark?"rgba(16,185,129,0.15)":"rgba(16,185,129,0.1)"):(dark?"#1e2130":"#f4f5f7"), color:isLive?"#34d399":(dark?"#444b5e":"#b0b0c0") }}>{isLive ? "● Live" : "Coming soon"}</div>
+      </div>
+      <div>
+        <div style={{ fontSize:17, fontWeight:800, color: headingColor, marginBottom:7, lineHeight:1.3 }}>{tool.name}</div>
+        <div style={{ fontSize:13, color: bodyColor, lineHeight:1.65 }}>{tool.description}</div>
+      </div>
+      <div style={{ display:"flex", justifyContent:"space-between", alignItems:"center", marginTop:"auto", paddingTop:4 }}>
+        <span style={{ fontSize:11, color: faintColor }}>{tool.added ? `Added ${tool.added}` : ""}</span>
+        {isLive ? <a href={tool.url} target="_blank" rel="noreferrer" className="launch-btn">Launch →</a> : <span style={{ fontSize:12, color: faintColor, fontStyle:"italic" }}>In development</span>}
       </div>
     </div>
   );
